@@ -1,6 +1,5 @@
 {
   "name": "kunkun-components",
-  "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
