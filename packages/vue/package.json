@@ -1,12 +1,13 @@
 {
 	"name": "@kksh/vue",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc -b && vite build && shx cp ./src/assets/themes.css ./dist/themes.css",
 		"preview": "vite preview"
 	},
+	"license": "MIT",
 	"exports": {
 		".": {
 			"import": "./dist/index.js",

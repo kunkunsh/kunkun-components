@@ -1,6 +1,6 @@
 {
   "name": "@kksh/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Huakun",
     "url": "https://huakunshen.com"
@@ -20,6 +20,7 @@
     "./themes": "./dist/themes.css"
   },
   "sideEffects": false,
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && shx cp src/registry/themes.css ./dist/themes.css",
