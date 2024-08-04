@@ -1,5 +1,11 @@
 # @kksh/svelte
 
+## 0.1.0
+
+### Minor Changes
+
+- 3 shadcn-style component library ready to deploy
+
 ## 0.0.2
 
 ### Patch Changes
