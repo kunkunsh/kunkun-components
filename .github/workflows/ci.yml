@@ -1,0 +1,23 @@
+name: CI Build & Test
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: "true"
+      - uses: pnpm/action-setup@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: "pnpm"
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
