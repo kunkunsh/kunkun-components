@@ -1,5 +1,11 @@
 # @kksh/svelte
 
+## 0.1.4
+
+### Patch Changes
+
+- Modify svelte component lib label and input export
+
 ## 0.1.1
 
 ### Patch Changes
