@@ -21,6 +21,165 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
+  apps/react:
+    dependencies:
+      '@kksh/react':
+        specifier: workspace:*
+        version: link:../../packages/react
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.15.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
+      '@typescript-eslint/parser':
+        specifier: ^7.15.0
+        version: 7.18.0(eslint@8.57.0)(typescript@5.4.5)
+      '@vitejs/plugin-react':
+        specifier: ^4.3.1
+        version: 4.3.1(vite@5.3.5(@types/node@20.14.14))
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.20(postcss@8.4.40)
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      eslint-plugin-react-hooks:
+        specifier: ^4.6.2
+        version: 4.6.2(eslint@8.57.0)
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.7
+        version: 0.4.9(eslint@8.57.0)
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.40
+      shx:
+        specifier: ^0.3.4
+        version: 0.3.4
+      tailwindcss:
+        specifier: ^3.4.6
+        version: 3.4.7
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.3.4
+        version: 5.3.5(@types/node@20.14.14)
+
+  apps/svelte:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      mode-watcher:
+        specifier: ^0.4.0
+        version: 0.4.1(svelte@4.2.18)
+      tailwind-merge:
+        specifier: ^2.4.0
+        version: 2.4.0
+      tailwind-variants:
+        specifier: ^0.2.1
+        version: 0.2.1(tailwindcss@3.4.7)
+    devDependencies:
+      '@kksh/svelte':
+        specifier: workspace:*
+        version: link:../../packages/svelte
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^3.1.1
+        version: 3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@20.14.14))
+      '@tsconfig/svelte':
+        specifier: ^5.0.4
+        version: 5.0.4
+      '@types/node':
+        specifier: ^20.14.12
+        version: 20.14.14
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.20(postcss@8.4.40)
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.40
+      svelte:
+        specifier: ^4.2.18
+        version: 4.2.18
+      svelte-check:
+        specifier: ^3.8.4
+        version: 3.8.5(@babel/core@7.25.2)(postcss-load-config@5.1.0(postcss@8.4.40))(postcss@8.4.40)(svelte@4.2.18)
+      tailwindcss:
+        specifier: ^3.4.4
+        version: 3.4.7
+      tslib:
+        specifier: ^2.6.3
+        version: 2.6.3
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.3.4
+        version: 5.3.5(@types/node@20.14.14)
+
+  apps/vue:
+    dependencies:
+      '@kksh/vue':
+        specifier: workspace:*
+        version: link:../../packages/vue
+      '@radix-icons/vue':
+        specifier: ^1.0.0
+        version: 1.0.0(vue@3.4.35(typescript@5.4.5))
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      radix-vue:
+        specifier: ^1.9.2
+        version: 1.9.2(vue@3.4.35(typescript@5.4.5))
+      tailwind-merge:
+        specifier: ^2.4.0
+        version: 2.4.0
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.7)
+      vue:
+        specifier: ^3.4.31
+        version: 3.4.35(typescript@5.4.5)
+    devDependencies:
+      '@types/node':
+        specifier: ^20.14.12
+        version: 20.14.14
+      '@vitejs/plugin-vue':
+        specifier: ^5.0.5
+        version: 5.1.2(vite@5.3.5(@types/node@20.14.14))(vue@3.4.35(typescript@5.4.5))
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.20(postcss@8.4.40)
+      postcss:
+        specifier: ^8.4.38
+        version: 8.4.40
+      tailwindcss:
+        specifier: ^3.4.6
+        version: 3.4.7
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.3.4
+        version: 5.3.5(@types/node@20.14.14)
+      vue-tsc:
+        specifier: ^2.0.24
+        version: 2.0.29(typescript@5.4.5)
+
   packages/react:
     dependencies:
       '@hookform/resolvers':
@@ -2168,6 +2327,9 @@ packages:
     resolution: {integrity: sha512-4Pq8odunHQPsTg2iE2yzWdzYed/8LySy2knxqJYkaNOQRXbqJ7O/Owpoon8ZM9L+jLL1faM5TVHV0eJxm68q8A==}
     peerDependencies:
       vue: ^2.7.0 || ^3.0.0
+
+  '@tsconfig/svelte@5.0.4':
+    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
 
   '@types/argparse@1.0.38':
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}
@@ -6946,6 +7108,8 @@ snapshots:
     dependencies:
       '@tanstack/virtual-core': 3.8.4
       vue: 3.4.35(typescript@5.4.5)
+
+  '@tsconfig/svelte@5.0.4': {}
 
   '@types/argparse@1.0.38': {}
 

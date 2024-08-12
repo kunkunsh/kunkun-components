@@ -1,0 +1,32 @@
+{
+	"name": "@shadcn-components/svelte-demo",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"@tsconfig/svelte": "^5.0.4",
+		"@types/node": "^20.14.12",
+		"autoprefixer": "^10.4.19",
+		"postcss": "^8.4.38",
+		"svelte": "^4.2.18",
+		"svelte-check": "^3.8.4",
+		"@kksh/svelte": "workspace:*",
+		"tailwindcss": "^3.4.4",
+		"tslib": "^2.6.3",
+		"typescript": "^5.2.2",
+		"vite": "^5.3.4"
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"mode-watcher": "^0.4.0",
+		"tailwind-merge": "^2.4.0",
+		"tailwind-variants": "^0.2.1"
+	}
+}
