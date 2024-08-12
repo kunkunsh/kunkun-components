@@ -9,7 +9,7 @@
 		ThemeWrapper,
 		updateTheme,
 		type ThemeConfig
-	} from "@shadcn-components/svelte"
+	} from "@kksh/svelte"
 	import { ModeWatcher } from "mode-watcher"
 	import { get } from "svelte/store"
 

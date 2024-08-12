@@ -18,8 +18,9 @@ import {
 	CommandShortcut,
 	// ThemeCustomizer,
 	updateTheme,
+	Button,
 	type ThemeConfig
-} from "@shadcn-components/vue"
+} from "@kksh/vue"
 import { onMounted, reactive, watch } from "vue"
 
 // const themeConfig = reactive<ThemeConfig>({
@@ -30,9 +31,18 @@ import { onMounted, reactive, watch } from "vue"
 // watch(themeConfig, (newVal, oldVal) => {
 // 	updateTheme(newVal)
 // })
+
+onMounted(() => {
+	updateTheme({
+		theme: "red",
+		radius: 0.5,
+		lightMode: "auto"
+	})
+})
 </script>
 
 <template>
+	<Button>Hello</Button>
 	<!-- <ThemeCustomizer
 		v-model:lightMode="themeConfig.lightMode"
 		v-model:theme="themeConfig.theme"

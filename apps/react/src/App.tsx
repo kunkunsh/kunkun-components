@@ -5,9 +5,9 @@ import {
 	ThemeProvider,
 	ThemeWrapper,
 	TooltipProvider
-} from "@shadcn-components/react"
-import "@shadcn-components/react/css"
-import "@shadcn-components/react/themes"
+} from "@kksh/react"
+import "@kksh/react/css"
+import "@kksh/react/themes"
 
 function App() {
 	return (
