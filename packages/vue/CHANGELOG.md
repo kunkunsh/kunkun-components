@@ -1,5 +1,11 @@
 # @kksh/vue
 
+## 0.1.3
+
+### Patch Changes
+
+- Upgrade @kksh/vue vue depedencies
+
 ## 0.1.1
 
 ### Patch Changes
