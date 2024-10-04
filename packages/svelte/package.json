@@ -1,6 +1,7 @@
 {
 	"name": "@kksh/svelte",
-	"version": "0.1.4",
+	"version": "0.1.5",
+	"sideEffects": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -22,6 +23,10 @@
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kunkunsh/kunkun-components.git"
+	},
 	"peerDependencies": {
 		"svelte": "^4.0.0"
 	},
