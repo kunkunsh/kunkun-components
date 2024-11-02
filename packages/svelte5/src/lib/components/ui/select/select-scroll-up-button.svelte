@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChevronUp from "svelte-radix/ChevronUp.svelte";
 	import { Select as SelectPrimitive, type WithoutChildrenOrChild } from "bits-ui";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		ref = $bindable(null),

@@ -1,5 +1,5 @@
 import { mode, setMode } from "mode-watcher"
-import { config as themeConfig } from "$lib/stores/config.js"
+import { config as themeConfig } from "@kksh/svelte5/stores/config.js"
 import type { HTMLAttributes } from "svelte/elements"
 import type { WithElementRef } from "bits-ui"
 import { type ClassValue, clsx } from "clsx"

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Select as SelectPrimitive, type WithoutChild } from "bits-ui";
-	import * as Select from "$lib/components/ui/select/index.js";
-	import { cn } from "$lib/utils.js";
+	import * as Select from "@kksh/svelte5/components/ui/select/index.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		ref = $bindable(null),

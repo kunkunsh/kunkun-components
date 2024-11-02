@@ -2,7 +2,7 @@
 	import ChevronRight from "svelte-radix/ChevronRight.svelte";
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLLiAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		ref = $bindable(null),

@@ -1,6 +1,6 @@
 import { persisted } from "svelte-persisted-store"
-import type { Style } from "$lib/registry/styles.js"
-import type { Theme } from "$lib/registry/themes.ts"
+import type { Style } from "@kksh/svelte5/registry/styles.js"
+import type { Theme } from "@kksh/svelte5/registry/themes.ts"
 import { writable } from "svelte/store"
 
 type Config = {

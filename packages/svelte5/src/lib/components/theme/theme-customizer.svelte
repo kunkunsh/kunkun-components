@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from "$lib/components/ui/button/index.js"
-	import { Label } from "$lib/components/ui/label/index.js"
-	import { themes } from "$lib/registry/themes.js"
-	import { cn } from "$lib/utils.js"
+	import { Button } from "@kksh/svelte5/components/ui/button/index.js"
+	import { Label } from "@kksh/svelte5/components/ui/label/index.js"
+	import { themes } from "@kksh/svelte5/registry/themes.js"
+	import { cn } from "@kksh/svelte5/utils.js"
 	// import { mode, setMode } from "mode-watcher"
 	import { onMount } from "svelte"
 	import Check from "svelte-radix/Check.svelte"

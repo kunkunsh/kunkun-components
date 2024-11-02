@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { AlertDialog as AlertDialogPrimitive } from "bits-ui";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		class: className,

@@ -1,5 +1,5 @@
 <script>
-	import { cn } from "$lib/utils"
+	import { cn } from "@kksh/svelte5/utils"
 </script>
 
 <div

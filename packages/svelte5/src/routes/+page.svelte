@@ -3,7 +3,7 @@
 	import { ThemeCustomizer, ThemeWrapper } from "@/components/theme/index.js"
 	import type { ThemeConfig } from "@/components/theme/types.js"
 	import { Button } from "@/components/ui/button/index.js"
-	import { config as themeConfig } from "$lib/stores/config.js"
+	import { config as themeConfig } from "@kksh/svelte5/stores/config.js"
 	import { get } from "svelte/store"
 	import { type Selected } from "bits-ui"
 	import { onMount } from "svelte"

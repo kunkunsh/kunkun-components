@@ -2,7 +2,7 @@
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { getEmblaContext } from "./context.js";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		ref = $bindable(null),

@@ -5,7 +5,7 @@
 		type EmblaContext,
 		setEmblaContext,
 	} from "./context.js";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		opts = {},

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { updateTheme } from "@/utils.js"
 	import "../app.css"
-	import { Toaster } from "$lib/components/ui/sonner/index.js"
+	import { Toaster } from "@kksh/svelte5/components/ui/sonner/index.js"
 	import "../lib/registry/themes.css"
-	import { config } from "$lib/stores/config.js"
+	import { config } from "@kksh/svelte5/stores/config.js"
 	import { ModeWatcher } from "mode-watcher"
 
 	let { children } = $props();

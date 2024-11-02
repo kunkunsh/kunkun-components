@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { PinInput as InputOTPPrimitive } from "bits-ui";
 	import type { ComponentProps } from "svelte";
-	import { cn } from "$lib/utils.js";
+	import { cn } from "@kksh/svelte5/utils.js";
 
 	let {
 		ref = $bindable(null),
