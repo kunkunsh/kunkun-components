@@ -1,5 +1,11 @@
 # @kksh/svelte5
 
+## 0.1.1
+
+### Patch Changes
+
+- Experiment publishing @kksh/svelte5 source directly instead of compiling to js first
+
 ## 0.1.0
 
 ### Patch Changes
