@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { RangeCalendar as RangeCalendarPrimitive } from "bits-ui";
-	import { buttonVariants } from "@kksh/svelte5/components/ui/button/index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { buttonVariants } from "@kksh/svelte5/components/ui/button/index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

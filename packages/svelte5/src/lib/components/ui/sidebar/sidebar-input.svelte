@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Input } from "@kksh/svelte5/components/ui/input/index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { Input } from "@kksh/svelte5/components/ui/input/index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 	import type { ComponentProps } from "svelte";
 
 	let {

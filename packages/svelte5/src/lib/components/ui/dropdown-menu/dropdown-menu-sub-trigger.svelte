@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DropdownMenu as DropdownMenuPrimitive, type WithoutChild } from "bits-ui";
 	import ChevronRight from "svelte-radix/ChevronRight.svelte";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

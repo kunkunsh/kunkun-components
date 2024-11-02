@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { AlertDialog as AlertDialogPrimitive } from "bits-ui";
-	import { buttonVariants } from "@kksh/svelte5/components/ui/button/index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { buttonVariants } from "@kksh/svelte5/components/ui/button/index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		class: className,

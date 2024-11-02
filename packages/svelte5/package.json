@@ -1,6 +1,6 @@
 {
 	"name": "@kksh/svelte5",
-	"version": "0.1.2-beta.0",
+	"version": "0.1.2-beta.3",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",

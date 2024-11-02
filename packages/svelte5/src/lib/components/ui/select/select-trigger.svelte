@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Select as SelectPrimitive, type WithoutChild } from "bits-ui";
 	import CaretSort from "svelte-radix/CaretSort.svelte";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

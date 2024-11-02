@@ -3,7 +3,7 @@
 	import Check from "svelte-radix/Check.svelte";
 	import Minus from "svelte-radix/Minus.svelte";
 	import type { Snippet } from "svelte";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

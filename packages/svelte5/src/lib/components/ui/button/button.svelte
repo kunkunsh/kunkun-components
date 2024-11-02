@@ -40,7 +40,7 @@
 </script>
 
 <script lang="ts">
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		class: className,

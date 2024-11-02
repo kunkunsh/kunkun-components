@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as Button from "@kksh/svelte5/components/ui/button/index.js";
+	import * as Button from "@kksh/svelte5/components/ui/button/index.ts";
 
 	let { ref = $bindable(null), ...restProps }: Button.Props = $props();
 </script>

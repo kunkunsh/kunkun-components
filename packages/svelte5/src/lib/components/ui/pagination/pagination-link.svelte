@@ -3,8 +3,8 @@
 	import {
 		type Props as ButtonProps,
 		buttonVariants,
-	} from "@kksh/svelte5/components/ui/button/index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	} from "@kksh/svelte5/components/ui/button/index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	type Props = WithoutChild<PaginationPrimitive.PageProps> &
 		ButtonProps & {

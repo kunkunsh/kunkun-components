@@ -2,7 +2,7 @@
 	import { ModeDropdown, ModeToggle } from "@kksh/svelte5/components/theme"
 	import { Button } from "@kksh/svelte5/components/ui/button"
 	import * as Command from "@kksh/svelte5/components/ui/command"
-	import { Separator } from "@kksh/svelte5/components/ui/separator/index.js"
+	import { Separator } from "@kksh/svelte5/components/ui/separator/index.ts"
 	import { cn } from "@kksh/svelte5/utils"
 	import { SettingsIcon } from "lucide-svelte"
 	import Calculator from "lucide-svelte/icons/calculator"

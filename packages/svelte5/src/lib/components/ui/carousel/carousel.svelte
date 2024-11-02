@@ -4,8 +4,8 @@
 		type CarouselProps,
 		type EmblaContext,
 		setEmblaContext,
-	} from "./context.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	} from "./context.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		opts = {},

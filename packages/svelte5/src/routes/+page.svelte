@@ -1,13 +1,13 @@
 <script lang="ts">
 	import CommandDemo from "@/components/cmdk/demo.svelte"
-	import { ThemeCustomizer, ThemeWrapper } from "@/components/theme/index.js"
-	import type { ThemeConfig } from "@/components/theme/types.js"
-	import { Button } from "@/components/ui/button/index.js"
-	import { config as themeConfig } from "@kksh/svelte5/stores/config.js"
+	import { ThemeCustomizer, ThemeWrapper } from "@/components/theme/index.ts"
+	import type { ThemeConfig } from "@/components/theme/types.ts"
+	import { Button } from "@/components/ui/button/index.ts"
+	import { config as themeConfig } from "@kksh/svelte5/stores/config.ts"
 	import { get } from "svelte/store"
 	import { type Selected } from "bits-ui"
 	import { onMount } from "svelte"
-	import { updateTheme } from "@/utils.js"
+	import { updateTheme } from "@/utils.ts"
 
 	onMount(() => {
 		updateTheme({

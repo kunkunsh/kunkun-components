@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Button } from "@kksh/svelte5/components/ui/button/index.js"
-	import * as Popover from "@kksh/svelte5/components/ui/popover/index.js"
+	import { Button } from "@kksh/svelte5/components/ui/button/index.ts"
+	import * as Popover from "@kksh/svelte5/components/ui/popover/index.ts"
 	import Paintbrush from "lucide-svelte/icons/paintbrush"
 	import Customizer from "./customizer.svelte"
 	import ThemeCustomizer from "./theme-customizer.svelte"

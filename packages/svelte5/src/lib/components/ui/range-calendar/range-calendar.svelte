@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { RangeCalendar as RangeCalendarPrimitive, type WithoutChildrenOrChild } from "bits-ui";
-	import * as RangeCalendar from "./index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import * as RangeCalendar from "./index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

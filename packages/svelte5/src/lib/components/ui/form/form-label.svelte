@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { WithoutChild } from "bits-ui";
 	import * as FormPrimitive from "formsnap";
-	import { Label } from "@kksh/svelte5/components/ui/label/index.js";
-	import { cn } from "@kksh/svelte5/utils.js";
+	import { Label } from "@kksh/svelte5/components/ui/label/index.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
 
 	let {
 		ref = $bindable(null),

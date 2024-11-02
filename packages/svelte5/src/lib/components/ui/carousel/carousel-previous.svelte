@@ -1,9 +1,9 @@
 <script lang="ts">
 	import ArrowLeft from "svelte-radix/ArrowLeft.svelte";
 	import type { WithoutChildren } from "bits-ui";
-	import { getEmblaContext } from "./context.js";
-	import { cn } from "@kksh/svelte5/utils.js";
-	import { Button, type Props } from "@kksh/svelte5/components/ui/button/index.js";
+	import { getEmblaContext } from "./context.ts";
+	import { cn } from "@kksh/svelte5/utils.ts";
+	import { Button, type Props } from "@kksh/svelte5/components/ui/button/index.ts";
 
 	let {
 		ref = $bindable(null),
