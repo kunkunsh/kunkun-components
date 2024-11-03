@@ -1,6 +1,6 @@
 {
 	"name": "@kksh/svelte5",
-	"version": "0.1.2-beta.3",
+	"version": "0.1.2-beta.5",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -28,7 +28,7 @@
 		"./themes": "./src/lib/registry/themes.css"
 	},
 	"peerDependencies": {
-		"lucide-svelte": "^0.416.0",
+		"lucide-svelte": "^0.454.0",
 		"svelte": "^5.0.0",
 		"svelte-sonner": "^0.3.27"
 	},
