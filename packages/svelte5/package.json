@@ -1,6 +1,6 @@
 {
 	"name": "@kksh/svelte5",
-	"version": "0.1.2-beta.7",
+	"version": "0.1.2-beta.8",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -29,39 +29,39 @@
 	},
 	"peerDependencies": {
 		"lucide-svelte": "^0.454.0",
-		"svelte": "^5.0.0",
-		"svelte-sonner": "^0.3.27"
+		"svelte": "^5.1.10",
+		"svelte-sonner": "^0.3.28"
 	},
 	"devDependencies": {
 		"@internationalized/date": "^3.5.6",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.7.4",
-		"@sveltejs/package": "^2.0.0",
+		"@sveltejs/adapter-auto": "^3.3.1",
+		"@sveltejs/kit": "^2.7.7",
+		"@sveltejs/package": "^2.3.7",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"autoprefixer": "^10.4.20",
-		"bits-ui": "1.0.0-next.36",
+		"bits-ui": "1.0.0-next.45",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.3.1",
 		"formsnap": "2.0.0-next.1",
-		"lucide-svelte": "^0.416.0",
+		"lucide-svelte": "^0.454.0",
 		"mode-watcher": "^0.4.1",
 		"paneforge": "1.0.0-next.1",
-		"publint": "^0.2.0",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"svelte-radix": "^1.1.1",
+		"publint": "^0.2.12",
+		"svelte": "^5.1.10",
+		"svelte-check": "^4.0.5",
+		"svelte-radix": "^2.0.1",
 		"svelte-sonner": "^0.3.28",
 		"sveltekit-superforms": "^2.20.0",
 		"tailwind-merge": "^2.5.4",
 		"tailwind-variants": "^0.2.1",
-		"tailwindcss": "^3.4.9",
+		"tailwindcss": "^3.4.14",
 		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5.0.0",
+		"typescript": "^5.6.3",
 		"vaul-svelte": "1.0.0-next.1",
-		"vite": "^5.0.11",
+		"vite": "^5.4.10",
 		"zod": "^3.23.8"
 	},
 	"dependencies": {
-		"svelte-persisted-store": "^0.11.0"
+		"svelte-persisted-store": "^0.12.0"
 	}
 }
