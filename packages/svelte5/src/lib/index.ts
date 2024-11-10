@@ -1,5 +1,4 @@
 // Reexport your entry components here
-import "../app.css"
 export * as Accordion from "./components/ui/accordion/index.js"
 export * as Alert from "./components/ui/alert/index.js"
 export * as AlertDialog from "./components/ui/alert-dialog/index.js"

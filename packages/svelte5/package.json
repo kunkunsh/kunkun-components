@@ -1,6 +1,6 @@
 {
 	"name": "@kksh/svelte5",
-	"version": "0.1.7",
+	"version": "0.1.9",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -23,6 +23,10 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"import": "./dist/utils.js"
 		},
 		"./themes": "./dist/registry/themes.css"
 	},
