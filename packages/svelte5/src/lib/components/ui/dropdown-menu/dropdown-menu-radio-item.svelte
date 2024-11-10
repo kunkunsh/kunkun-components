@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DropdownMenu as DropdownMenuPrimitive, type WithoutChild } from "bits-ui";
 	import DotFilled from "svelte-radix/DotFilled.svelte";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),

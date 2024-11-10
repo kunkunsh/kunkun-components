@@ -12,7 +12,7 @@
 	import {
 		RenderComponentConfig,
 		RenderSnippetConfig,
-	} from "@kksh/svelte5/components/ui/data-table/render-helpers.ts";
+	} from "$lib/components/ui/data-table/render-helpers.js";
 
 	type Props = {
 		/** The cell or header field of the current cell's column definition. */

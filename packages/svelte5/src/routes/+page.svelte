@@ -1,13 +1,13 @@
 <script lang="ts">
-	import CommandDemo from "@/components/cmdk/demo.svelte"
-	import { ThemeCustomizer, ThemeWrapper } from "@/components/theme/index.ts"
-	import type { ThemeConfig } from "@/components/theme/types.ts"
-	import { Button } from "@/components/ui/button/index.ts"
-	import { config as themeConfig } from "@kksh/svelte5/stores/config.ts"
+	// import CommandDemo from "$lib/components/cmdk/demo.svelte"
+	import { ThemeCustomizer, ThemeWrapper } from "$lib/components/theme/index.ts"
+	import type { ThemeConfig } from "$lib/components/theme/types.ts"
+	import { Button } from "$lib/components/ui/button/index.ts"
+	import { config as themeConfig } from "$lib/stores/config.js"
 	import { get } from "svelte/store"
 	import { type Selected } from "bits-ui"
 	import { onMount } from "svelte"
-	import { updateTheme } from "@/utils.ts"
+	import { updateTheme } from "$lib/utils.js"
 
 	onMount(() => {
 		updateTheme({
@@ -25,6 +25,6 @@
 		<div>
 			<Button>Hello</Button>
 		</div>
-		<CommandDemo class="h-[30em] w-[45em]" />
+		<!-- <CommandDemo class="h-[30em] w-[45em]" /> -->
 	</div>
 </ThemeWrapper>

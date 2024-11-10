@@ -1,10 +1,10 @@
 <script lang="ts">
-	import * as Sheet from "@kksh/svelte5/components/ui/sheet/index.ts";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import * as Sheet from "$lib/components/ui/sheet/index.js";
+	import { cn } from "$lib/utils.js";
 	import type { WithElementRef } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { SIDEBAR_WIDTH_MOBILE } from "./constants.ts";
-	import { useSidebar } from "./context.svelte.ts";
+	import { SIDEBAR_WIDTH_MOBILE } from "./constants.js";
+	import { useSidebar } from "./context.svelte.js";
 
 	let {
 		ref = $bindable(null),

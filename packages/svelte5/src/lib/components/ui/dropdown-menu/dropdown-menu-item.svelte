@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import { cn } from "$lib/utils.js";
 	import { DropdownMenu as DropdownMenuPrimitive } from "bits-ui";
 
 	let {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Calendar as CalendarPrimitive, type WithoutChildrenOrChild } from "bits-ui";
-	import * as Calendar from "./index.ts";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import * as Calendar from "./index.js";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),

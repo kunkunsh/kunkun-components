@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { config } from "@kksh/svelte5/stores/config.ts";
-	import { type PrimitiveDivAttributes, cn, updateTheme } from "@kksh/svelte5/utils.ts";
+	import { config } from "$lib/stores/config.js";
+	import { type PrimitiveDivAttributes, cn, updateTheme } from "$lib/utils.js";
 	import { mode, setMode } from "mode-watcher"
 
 	let {

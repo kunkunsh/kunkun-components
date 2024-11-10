@@ -540,6 +540,87 @@ importers:
         specifier: ^5.0.11
         version: 5.4.10(@types/node@22.8.6)
 
+  packages/svelte2:
+    devDependencies:
+      '@internationalized/date':
+        specifier: ^3.5.6
+        version: 3.5.6
+      '@sveltejs/adapter-auto':
+        specifier: ^3.0.0
+        version: 3.3.1(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))
+      '@sveltejs/kit':
+        specifier: ^2.0.0
+        version: 2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6))
+      '@sveltejs/package':
+        specifier: ^2.0.0
+        version: 2.3.7(svelte@5.1.10)(typescript@5.6.3)
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^4.0.0
+        version: 4.0.0(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6))
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.47)
+      bits-ui:
+        specifier: 1.0.0-next.49
+        version: 1.0.0-next.49(svelte@5.1.10)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      embla-carousel-svelte:
+        specifier: ^8.3.1
+        version: 8.3.1(svelte@5.1.10)
+      formsnap:
+        specifier: 2.0.0-next.1
+        version: 2.0.0-next.1(svelte@5.1.10)(sveltekit-superforms@2.20.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(@types/json-schema@7.0.15)(svelte@5.1.10)(typescript@5.6.3))
+      lucide-svelte:
+        specifier: ^0.456.0
+        version: 0.456.0(svelte@5.1.10)
+      mode-watcher:
+        specifier: ^0.4.1
+        version: 0.4.1(svelte@5.1.10)
+      paneforge:
+        specifier: 1.0.0-next.1
+        version: 1.0.0-next.1(svelte@5.1.10)
+      publint:
+        specifier: ^0.2.0
+        version: 0.2.12
+      svelte:
+        specifier: ^5.0.0
+        version: 5.1.10
+      svelte-check:
+        specifier: ^4.0.0
+        version: 4.0.5(picomatch@4.0.2)(svelte@5.1.10)(typescript@5.6.3)
+      svelte-radix:
+        specifier: ^2.0.1
+        version: 2.0.1(svelte@5.1.10)
+      svelte-sonner:
+        specifier: ^0.3.28
+        version: 0.3.28(svelte@5.1.10)
+      sveltekit-superforms:
+        specifier: ^2.20.0
+        version: 2.20.0(@sveltejs/kit@2.7.7(@sveltejs/vite-plugin-svelte@4.0.0(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(svelte@5.1.10)(vite@5.4.10(@types/node@22.8.6)))(@types/json-schema@7.0.15)(svelte@5.1.10)(typescript@5.6.3)
+      tailwind-merge:
+        specifier: ^2.5.4
+        version: 2.5.4
+      tailwind-variants:
+        specifier: ^0.2.1
+        version: 0.2.1(tailwindcss@3.4.14)
+      tailwindcss:
+        specifier: ^3.4.9
+        version: 3.4.14
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.14)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.6.3
+      vite:
+        specifier: ^5.0.11
+        version: 5.4.10(@types/node@22.8.6)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+
   packages/svelte5:
     dependencies:
       svelte-persisted-store:
@@ -565,8 +646,8 @@ importers:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
       bits-ui:
-        specifier: 1.0.0-next.45
-        version: 1.0.0-next.45(svelte@5.1.10)
+        specifier: 1.0.0-next.49
+        version: 1.0.0-next.49(svelte@5.1.10)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -619,8 +700,8 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
       vaul-svelte:
-        specifier: 1.0.0-next.1
-        version: 1.0.0-next.1(svelte@5.1.10)
+        specifier: 1.0.0-next.2
+        version: 1.0.0-next.2(svelte@5.1.10)
       vite:
         specifier: ^5.4.10
         version: 5.4.10(@types/node@22.8.6)
@@ -2924,14 +3005,8 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.118
 
-  bits-ui@1.0.0-next.28:
-    resolution: {integrity: sha512-mA2gf79xVLmq2mY0tAzC6ZBB8hUJunxb20/04kOVIN1UL+d75BvA3hdSdEgSj0TrEWU1GmlJr1HWKW4+Q1JIhA==}
-    engines: {node: '>=18', pnpm: '>=8.7.0'}
-    peerDependencies:
-      svelte: ^5.0.0-next.1
-
-  bits-ui@1.0.0-next.45:
-    resolution: {integrity: sha512-kt7gYIirEo2Rg1hMudcGEzSHogQTA22d/j1x8v+wIshsIqqcCN6DXJZpTojSCQWxny8IEa9CRnLwAzY4B2qf1Q==}
+  bits-ui@1.0.0-next.49:
+    resolution: {integrity: sha512-7EoNj7pu9+RVv6MM1kGVvDzH2aA38v07Q+BDSq8yiLIHxZ5dTkDHwoikhtT/+jMU25c0uYvHq44GEQX+027IFw==}
     engines: {node: '>=18', pnpm: '>=8.7.0'}
     peerDependencies:
       svelte: ^5.0.0-next.1
@@ -4040,6 +4115,11 @@ packages:
 
   lucide-svelte@0.454.0:
     resolution: {integrity: sha512-TgW17HI7M8LeFZ3NpaDp1LwPGBGMVjx/x81TtK+AacEQvmJcqetqeJNeBT18NMEJP9+zi/Wt+Zc8mo44K5Uszw==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+
+  lucide-svelte@0.456.0:
+    resolution: {integrity: sha512-SSdmxJOmL1h42ZypuGr54dYsXAT5o6WkQPKVDFnnrD0liOaXzfNNJuA7JbpkO9FFozBchyVpB1A1mKRmXOD8ug==}
     peerDependencies:
       svelte: ^3 || ^4 || ^5.0.0-next.42
 
@@ -5287,8 +5367,8 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.1
 
-  vaul-svelte@1.0.0-next.1:
-    resolution: {integrity: sha512-HdKT5ha0FG1ZpJTtl9LjkwHhhdDlgoAr86lPQbiS1PfrjmrXwWG/hXXk/RMJWDJfAcy1lI9wdo+jt2l6hJ6asA==}
+  vaul-svelte@1.0.0-next.2:
+    resolution: {integrity: sha512-/SjvMvStOMwTnGsQAn+yP0bbQUufb3ZXu8MdnLeQCB33wCZ1ilCPa92DHx1EDhIlVTbiOitwhWp/zaHw/U3OqA==}
     engines: {node: '>=18', pnpm: '>=8.7.0'}
     peerDependencies:
       svelte: ^5.0.0
@@ -8113,17 +8193,7 @@ snapshots:
       nanoid: 5.0.8
       svelte: 4.2.19
 
-  bits-ui@1.0.0-next.28(svelte@5.1.10):
-    dependencies:
-      '@floating-ui/core': 1.6.8
-      '@floating-ui/dom': 1.6.12
-      '@internationalized/date': 3.5.6
-      esm-env: 1.1.4
-      runed: 0.15.3(svelte@5.1.10)
-      svelte: 5.1.10
-      svelte-toolbelt: 0.4.6(svelte@5.1.10)
-
-  bits-ui@1.0.0-next.45(svelte@5.1.10):
+  bits-ui@1.0.0-next.49(svelte@5.1.10):
     dependencies:
       '@floating-ui/core': 1.6.8
       '@floating-ui/dom': 1.6.12
@@ -9281,6 +9351,10 @@ snapshots:
       svelte: 5.1.9
 
   lucide-svelte@0.454.0(svelte@5.1.10):
+    dependencies:
+      svelte: 5.1.10
+
+  lucide-svelte@0.456.0(svelte@5.1.10):
     dependencies:
       svelte: 5.1.10
 
@@ -10617,9 +10691,9 @@ snapshots:
       bits-ui: 0.21.16(svelte@4.2.19)
       svelte: 4.2.19
 
-  vaul-svelte@1.0.0-next.1(svelte@5.1.10):
+  vaul-svelte@1.0.0-next.2(svelte@5.1.10):
     dependencies:
-      bits-ui: 1.0.0-next.28(svelte@5.1.10)
+      bits-ui: 1.0.0-next.49(svelte@5.1.10)
       svelte: 5.1.10
       svelte-toolbelt: 0.4.6(svelte@5.1.10)
 

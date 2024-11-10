@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Pagination as PaginationPrimitive } from "bits-ui";
 	import ChevronRight from "svelte-radix/ChevronRight.svelte";
-	import { cn } from "@kksh/svelte5/utils.ts";
-	import { buttonVariants } from "@kksh/svelte5/components/ui/button/index.ts";
+	import { cn } from "$lib/utils.js";
+	import { buttonVariants } from "$lib/components/ui/button/index.js";
 
 	let {
 		ref = $bindable(null),

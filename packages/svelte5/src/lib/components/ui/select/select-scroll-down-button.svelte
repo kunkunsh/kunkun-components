@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChevronDown from "svelte-radix/ChevronDown.svelte";
 	import { Select as SelectPrimitive, type WithoutChildrenOrChild } from "bits-ui";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),

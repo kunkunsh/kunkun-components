@@ -2,7 +2,7 @@
 	import DotsHorizontal from "svelte-radix/DotsHorizontal.svelte";
 	import type { WithElementRef, WithoutChildren } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from "@kksh/svelte5/components/ui/button/index.ts"
+	import { Button } from "$lib/components/ui/button/index.js"
 	import Moon from "lucide-svelte/icons/moon"
 	import Sun from "lucide-svelte/icons/sun"
 	import { toggleMode } from "mode-watcher"

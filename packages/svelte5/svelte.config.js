@@ -13,8 +13,8 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			"@/*": "./src/lib/*",
-			"@kksh/svelte5/*": "./src/lib/*"
+			// "@/*": "./src/lib/*",
+			// "@kksh/svelte5/*": "./src/lib/*"
 		}
 	}
 }

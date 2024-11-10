@@ -2,8 +2,8 @@
 	import { Dialog as DialogPrimitive, type WithoutChildrenOrChild } from "bits-ui";
 	import Cross2 from "svelte-radix/Cross2.svelte";
 	import type { Snippet } from "svelte";
-	import * as Dialog from "./index.ts";
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import * as Dialog from "./index.js";
+	import { cn } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),

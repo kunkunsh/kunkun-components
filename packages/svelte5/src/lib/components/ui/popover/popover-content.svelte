@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from "@kksh/svelte5/utils.ts";
+	import { cn } from "$lib/utils.js";
 	import { Popover as PopoverPrimitive } from "bits-ui";
 
 	let {
