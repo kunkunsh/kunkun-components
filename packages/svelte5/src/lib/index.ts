@@ -1,4 +1,5 @@
 // Reexport your entry components here
+import "../app.css"
 export * as Accordion from "./components/ui/accordion/index.js"
 export * as Alert from "./components/ui/alert/index.js"
 export * as AlertDialog from "./components/ui/alert-dialog/index.js"
@@ -16,8 +17,8 @@ export * as Collapsible from "./components/ui/collapsible/index.js"
 export * as Command from "./components/ui/command/index.js"
 export * as ContextMenu from "./components/ui/context-menu/index.js"
 export * as Dialog from "./components/ui/dialog/index.js"
-// export * as Drawer from "./components/ui/drawer/index.js"
-// export * as DropdownMenu from "./components/ui/dropdown-menu/index.js"
+export * as Drawer from "./components/ui/drawer/index.js"
+export * as DropdownMenu from "./components/ui/dropdown-menu/index.js"
 export * as Form from "./components/ui/form/index.js"
 export * as HoverCard from "./components/ui/hover-card/index.js"
 export { Input } from "./components/ui/input/index.js"
@@ -35,9 +36,11 @@ export { Separator } from "./components/ui/separator/index.js"
 export * as Sheet from "./components/ui/sheet/index.js"
 export { Skeleton } from "./components/ui/skeleton/index.js"
 export { Slider } from "./components/ui/slider/index.js"
+export * as SideBar from './components/ui/sidebar/index.js'
 export { Toaster } from "./components/ui/sonner/index.js"
 export { Switch } from "./components/ui/switch/index.js"
 export * as Table from "./components/ui/table/index.js"
+export * as DataTable from "./components/ui/data-table/index.js"
 export * as Tabs from "./components/ui/tabs/index.js"
 export {
 	Textarea,
