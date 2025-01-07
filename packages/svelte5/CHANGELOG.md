@@ -1,5 +1,11 @@
 # @kksh/svelte5
 
+## 0.1.11
+
+### Patch Changes
+
+- Upgrade dependencies version
+
 ## 0.1.1
 
 ### Patch Changes
