@@ -1,8 +1,9 @@
-import Root from "./carousel.svelte";
-import Content from "./carousel-content.svelte";
-import Item from "./carousel-item.svelte";
-import Previous from "./carousel-previous.svelte";
-import Next from "./carousel-next.svelte";
+import Root from "./carousel.svelte"
+import Content from "./carousel-content.svelte"
+import Item from "./carousel-item.svelte"
+import Previous from "./carousel-previous.svelte"
+import Next from "./carousel-next.svelte"
+export { type CarouselAPI } from "./context.js"
 
 export {
 	Root,
@@ -15,5 +16,5 @@ export {
 	Content as CarouselContent,
 	Item as CarouselItem,
 	Previous as CarouselPrevious,
-	Next as CarouselNext,
-};
+	Next as CarouselNext
+}
