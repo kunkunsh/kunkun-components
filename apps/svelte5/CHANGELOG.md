@@ -1,5 +1,12 @@
 # svelte5
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @kksh/svelte5@0.1.13
+
 ## 0.0.5
 
 ### Patch Changes

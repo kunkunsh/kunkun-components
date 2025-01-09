@@ -1,5 +1,11 @@
 # @kksh/svelte5
 
+## 0.1.13
+
+### Patch Changes
+
+- Add more color variants for alert
+
 ## 0.1.11
 
 ### Patch Changes

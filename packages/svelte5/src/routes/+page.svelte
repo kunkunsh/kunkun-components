@@ -8,12 +8,12 @@
 	import { type Selected } from "bits-ui"
 	import { onMount } from "svelte"
 	import { updateTheme } from "$lib/utils.js"
-
+	import * as Alert from "$lib/components/ui/alert/index.js"
 	onMount(() => {
 		updateTheme({
 			radius: 0,
 			theme: "blue",
-			lightMode: "light"
+			lightMode: "dark"
 		})
 	})
 </script>
@@ -25,6 +25,18 @@
 		<div>
 			<Button>Hello</Button>
 		</div>
+		<Alert.Root variant="error">
+			<Alert.Title>Error</Alert.Title>
+			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
+		</Alert.Root>
+		<Alert.Root variant="success">
+			<Alert.Title>Success</Alert.Title>
+			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
+		</Alert.Root>
+		<Alert.Root variant="info">
+			<Alert.Title>Info</Alert.Title>
+			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
+		</Alert.Root>
 		<!-- <CommandDemo class="h-[30em] w-[45em]" /> -->
 	</div>
 </ThemeWrapper>
