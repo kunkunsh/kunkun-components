@@ -470,8 +470,8 @@ importers:
         specifier: ^0.4.0
         version: 0.4.1(svelte@4.2.19)
       paneforge:
-        specifier: 1.0.0-next.2
-        version: 1.0.0-next.2(svelte@4.2.19)
+        specifier: ^0.0.5
+        version: 0.0.5(svelte@4.2.19)
       svelte-persisted-store:
         specifier: ^0.11.0
         version: 0.11.0(svelte@4.2.19)
@@ -4509,6 +4509,11 @@ packages:
 
   package-manager-detector@0.2.8:
     resolution: {integrity: sha512-ts9KSdroZisdvKMWVAVCXiKqnqNfXz4+IbrBG8/BWx/TR5le+jfenvoBuIZ6UWM9nz47W7AbD9qYfAwfWMIwzA==}
+
+  paneforge@0.0.5:
+    resolution: {integrity: sha512-98QHobaN/KeQhqqglbvjUmNCTRC4h4iqDxpSV8jCGhRLttgGlRXZNzWNr4Firni5rwasAZjOza0k/JdwppB/AQ==}
+    peerDependencies:
+      svelte: ^4.0.0 || ^5.0.0-next.1
 
   paneforge@1.0.0-next.2:
     resolution: {integrity: sha512-Z3XJDcy6qO4RsP24hKPxfFgJaZeH9ORFaudIoRIcgT3eG9ryxVr4B06zPEOzkgsWVtqLDBUr/5jzHcyf1Csuiw==}
@@ -9984,10 +9989,10 @@ snapshots:
 
   package-manager-detector@0.2.8: {}
 
-  paneforge@1.0.0-next.2(svelte@4.2.19):
+  paneforge@0.0.5(svelte@4.2.19):
     dependencies:
+      nanoid: 5.0.8
       svelte: 4.2.19
-      svelte-toolbelt: 0.4.6(svelte@4.2.19)
 
   paneforge@1.0.0-next.2(svelte@5.16.6):
     dependencies:
@@ -10693,12 +10698,6 @@ snapshots:
   svelte-sonner@0.3.28(svelte@5.16.6):
     dependencies:
       svelte: 5.16.6
-
-  svelte-toolbelt@0.4.6(svelte@4.2.19):
-    dependencies:
-      clsx: 2.1.1
-      style-to-object: 1.0.8
-      svelte: 4.2.19
 
   svelte-toolbelt@0.4.6(svelte@5.16.6):
     dependencies:
