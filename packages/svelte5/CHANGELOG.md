@@ -1,5 +1,11 @@
 # @kksh/svelte5
 
+## 0.1.14
+
+### Patch Changes
+
+- Upgrade paneforge to "next" to fix resizable
+
 ## 0.1.13
 
 ### Patch Changes

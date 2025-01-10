@@ -151,7 +151,7 @@ importers:
         version: 5.0.3(svelte@5.16.6)(vite@6.0.7(@types/node@22.8.6)(jiti@1.21.6)(yaml@2.6.0))
       autoprefixer:
         specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.49)
+        version: 10.4.20(postcss@8.4.47)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -470,8 +470,8 @@ importers:
         specifier: ^0.4.0
         version: 0.4.1(svelte@4.2.19)
       paneforge:
-        specifier: ^0.0.5
-        version: 0.0.5(svelte@4.2.19)
+        specifier: 1.0.0-next.2
+        version: 1.0.0-next.2(svelte@4.2.19)
       svelte-persisted-store:
         specifier: ^0.11.0
         version: 0.11.0(svelte@4.2.19)
@@ -561,8 +561,8 @@ importers:
         specifier: ^0.5.0
         version: 0.5.0(svelte@5.16.6)
       paneforge:
-        specifier: 0.0.6
-        version: 0.0.6(svelte@5.16.6)
+        specifier: 1.0.0-next.2
+        version: 1.0.0-next.2(svelte@5.16.6)
       svelte-persisted-store:
         specifier: ^0.12.0
         version: 0.12.0(svelte@5.16.6)
@@ -596,7 +596,7 @@ importers:
         version: 5.0.3(svelte@5.16.6)(vite@6.0.7(@types/node@22.8.6)(jiti@1.21.6)(yaml@2.6.0))
       autoprefixer:
         specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.47)
+        version: 10.4.20(postcss@8.4.49)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -4510,15 +4510,10 @@ packages:
   package-manager-detector@0.2.8:
     resolution: {integrity: sha512-ts9KSdroZisdvKMWVAVCXiKqnqNfXz4+IbrBG8/BWx/TR5le+jfenvoBuIZ6UWM9nz47W7AbD9qYfAwfWMIwzA==}
 
-  paneforge@0.0.5:
-    resolution: {integrity: sha512-98QHobaN/KeQhqqglbvjUmNCTRC4h4iqDxpSV8jCGhRLttgGlRXZNzWNr4Firni5rwasAZjOza0k/JdwppB/AQ==}
+  paneforge@1.0.0-next.2:
+    resolution: {integrity: sha512-Z3XJDcy6qO4RsP24hKPxfFgJaZeH9ORFaudIoRIcgT3eG9ryxVr4B06zPEOzkgsWVtqLDBUr/5jzHcyf1Csuiw==}
     peerDependencies:
-      svelte: ^4.0.0 || ^5.0.0-next.1
-
-  paneforge@0.0.6:
-    resolution: {integrity: sha512-jYeN/wdREihja5c6nK3S5jritDQ+EbCqC5NrDo97qCZzZ9GkmEcN5C0ZCjF4nmhBwkDKr6tLIgz4QUKWxLXjAw==}
-    peerDependencies:
-      svelte: ^4.0.0 || ^5.0.0-next.1
+      svelte: ^5.11.0
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -9989,15 +9984,15 @@ snapshots:
 
   package-manager-detector@0.2.8: {}
 
-  paneforge@0.0.5(svelte@4.2.19):
+  paneforge@1.0.0-next.2(svelte@4.2.19):
     dependencies:
-      nanoid: 5.0.8
       svelte: 4.2.19
+      svelte-toolbelt: 0.4.6(svelte@4.2.19)
 
-  paneforge@0.0.6(svelte@5.16.6):
+  paneforge@1.0.0-next.2(svelte@5.16.6):
     dependencies:
-      nanoid: 5.0.8
       svelte: 5.16.6
+      svelte-toolbelt: 0.4.6(svelte@5.16.6)
 
   parent-module@1.0.1:
     dependencies:
@@ -10698,6 +10693,12 @@ snapshots:
   svelte-sonner@0.3.28(svelte@5.16.6):
     dependencies:
       svelte: 5.16.6
+
+  svelte-toolbelt@0.4.6(svelte@4.2.19):
+    dependencies:
+      clsx: 2.1.1
+      style-to-object: 1.0.8
+      svelte: 4.2.19
 
   svelte-toolbelt@0.4.6(svelte@5.16.6):
     dependencies:

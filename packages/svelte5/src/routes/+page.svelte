@@ -9,6 +9,7 @@
 	import { onMount } from "svelte"
 	import { updateTheme } from "$lib/utils.js"
 	import * as Alert from "$lib/components/ui/alert/index.js"
+	import { Resizable } from "$lib/index.ts"
 	onMount(() => {
 		updateTheme({
 			radius: 0,
@@ -17,6 +18,14 @@
 		})
 	})
 </script>
+
+<div class="h-96 border-2 border-red-500">
+	<Resizable.PaneGroup direction="horizontal">
+		<Resizable.Pane>One</Resizable.Pane>
+		<Resizable.Handle />
+		<Resizable.Pane>Two</Resizable.Pane>
+	</Resizable.PaneGroup>
+</div>
 
 <ThemeCustomizer bind:config={$themeConfig} />
 <ThemeWrapper>
@@ -37,6 +46,5 @@
 			<Alert.Title>Info</Alert.Title>
 			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
 		</Alert.Root>
-		<!-- <CommandDemo class="h-[30em] w-[45em]" /> -->
 	</div>
 </ThemeWrapper>
