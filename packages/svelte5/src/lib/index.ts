@@ -35,7 +35,7 @@ export { Separator } from "./components/ui/separator/index.js"
 export * as Sheet from "./components/ui/sheet/index.js"
 export { Skeleton } from "./components/ui/skeleton/index.js"
 export { Slider } from "./components/ui/slider/index.js"
-export * as SideBar from './components/ui/sidebar/index.js'
+export * as Sidebar from "./components/ui/sidebar/index.js"
 export { Toaster } from "./components/ui/sonner/index.js"
 export { Switch } from "./components/ui/switch/index.js"
 export * as Table from "./components/ui/table/index.js"
