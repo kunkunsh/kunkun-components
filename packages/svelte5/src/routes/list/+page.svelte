@@ -3,28 +3,25 @@
 	import * as Command from "$lib/components/ui/command/index.ts"
 	import { createVirtualizer, type VirtualItem } from "@tanstack/svelte-virtual"
 	import VirtualGroup from "./VirtualGroup.svelte"
-	import { Inspect } from "svelte-inspect-value"
 	import Fuse from "fuse.js"
-	import { onMount, setContext } from "svelte"
+	import { setContext } from "svelte"
 
 	const itemHeight = 30
 	setContext("itemHeight", itemHeight)
 
-	const sections = $state(getSections(3))
+	const sections = $state(getSections(1))
 	const items = getItems(1000)
 	let searchTerm = $state("")
 	let virtualListEl: HTMLDivElement | null = $state(null)
-	// setContext("command-list-ref", () => virtualListEl)
 	const fuse = new Fuse(items, {
 		includeScore: true,
 		threshold: 0.2,
 		keys: ["name"]
 	})
-	let resultingItems = $derived.by(() => {
-		void searchTerm
-		return searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
-	})
-	// $inspect(resultingItems)
+	let resultingItems = $derived(
+		// when search term changes, update the resulting items
+		searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
+	)
 
 	// section total height is auto derived from section refs
 	let sectionTotalHeight = $derived(sections.reduce((acc, s) => acc + (s.sectionHeight ?? 0), 0))
@@ -51,18 +48,11 @@
 	})
 </script>
 
-<Inspect name="sectionTotalHeight" value={sectionTotalHeight} />
-<Inspect name="sectionsCummulativeHeight" value={sectionsCummulativeHeight} />
 <Command.Root shouldFilter={false}>
 	<Command.Input placeholder="Search..." bind:value={searchTerm} />
 	<Command.List bind:ref={virtualListEl}>
 		<div style="position: relative; height: {itemsTotalSize + sectionTotalHeight}px; width: 100%;">
 			{#each sections as section, i}
-				<!-- <Command.Group heading={section.name}>
-				{#each section.items as item}
-					<Command.Item>{item.name}</Command.Item>
-				{/each}
-			</Command.Group> -->
 				<VirtualGroup
 					heading={section.name}
 					items={section.items}
@@ -81,11 +71,6 @@
 				</Command.Item>
 			{/each}
 		</div>
-
-		<!-- {#each items as item}
-			<Command.Item>{item.name}</Command.Item>
-		{/each} -->
 	</Command.List>
 	<footer class="">hello</footer>
 </Command.Root>
-<!-- <Inspect name="resultingItems" value={resultingItems} /> -->

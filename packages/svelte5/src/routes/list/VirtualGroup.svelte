@@ -40,25 +40,25 @@
 	let virtualItems: VirtualItem[] = $state([])
 	let itemsTotalSize = $state(0)
 
-	let resultingItems = $derived.by(() => {
-		void searchTerm
-		return searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
+	let resultingItems = $derived(
+		// when search term changes, update the resulting items
+		searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
+	)
+
+	$effect(() => {
+		// when props.items update, update the fuse collection
+		fuse.setCollection(items)
 	})
 
 	$effect(() => {
-		$virtualizer.setOptions({
-			count: items.length,
-			scrollMargin
-		})
+		// when resultingItems changes, update virtualizer count and scrollMargin
+		$virtualizer.setOptions({ count: resultingItems.length, scrollMargin })
 		virtualItems = $virtualizer.getVirtualItems()
-		fuse.setCollection(items)
 		itemsTotalSize = $virtualizer.getTotalSize()
 	})
-	// let groupHeight = $derived(itemsTotalSize + itemHeight)
 	$effect(() => {
 		sectionHeight = itemsTotalSize + itemHeight
 	})
-	let useVirtual = $state(true)
 </script>
 
 <Command.Group
@@ -67,19 +67,13 @@
 	class="relative"
 	style="height: {sectionHeight}px;"
 >
-	{#if !useVirtual}
-		{#each items as item, index}
-			<Command.Item>{index}: {item.name}</Command.Item>
-		{/each}
-	{:else}
-		{#each virtualItems as row (row.index)}
-			<Command.Item
-				style="position: absolute; top: 0; left: 0; width: 100%; height: {row.size}px; transform: translateY({row.start -
-					scrollMargin +
-					30}px);"
-			>
-				<span>{row.index}: {resultingItems[row.index]?.name}</span>
-			</Command.Item>
-		{/each}
-	{/if}
+	{#each virtualItems as row (row.index)}
+		<Command.Item
+			style="position: absolute; top: 0; left: 0; width: 100%; height: {row.size}px; transform: translateY({row.start -
+				scrollMargin +
+				30}px);"
+		>
+			<span>{row.index}: {resultingItems[row.index]?.name}</span>
+		</Command.Item>
+	{/each}
 </Command.Group>
