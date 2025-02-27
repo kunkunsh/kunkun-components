@@ -13,6 +13,8 @@ export type Item = {
 export type Section = {
 	name: string
 	items: Item[]
+	sectionRef: HTMLDivElement | null
+	sectionHeight: number
 }
 
 export function getItems(n: number = 10): Item[] {
@@ -26,6 +28,8 @@ export function getItems(n: number = 10): Item[] {
 export function getSections(n: number = 10): Section[] {
 	return Array.from({ length: n }, () => ({
 		name: faker.lorem.word(),
-		items: getItems()
+		items: getItems(3),
+		sectionRef: null,
+		sectionHeight: 0
 	}))
 }
