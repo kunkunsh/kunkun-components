@@ -21,7 +21,6 @@
 		keys: ["name"]
 	})
 	let resultingItems = $derived.by(() => {
-		console.log("update resultingItems")
 		void searchTerm
 		return searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
 	})
@@ -56,11 +55,8 @@
 <Inspect name="sectionsCummulativeHeight" value={sectionsCummulativeHeight} />
 <Command.Root shouldFilter={false}>
 	<Command.Input placeholder="Search..." bind:value={searchTerm} />
-	<Command.List bind:ref={virtualListEl} class="border border-blue-500">
-		<div
-			class="border-2 border-green-500"
-			style="position: relative; height: {itemsTotalSize + sectionTotalHeight}px; width: 100%;"
-		>
+	<Command.List bind:ref={virtualListEl}>
+		<div style="position: relative; height: {itemsTotalSize + sectionTotalHeight}px; width: 100%;">
 			{#each sections as section, i}
 				<!-- <Command.Group heading={section.name}>
 				{#each section.items as item}
@@ -73,20 +69,17 @@
 					parentRef={virtualListEl}
 					bind:sectionRef={section.sectionRef}
 					scrollMargin={sectionsCummulativeHeight[i]}
-					sectionIdx={i}
-					sectionHeight={section.sectionHeight}
+					bind:sectionHeight={section.sectionHeight}
+					{searchTerm}
 				/>
 			{/each}
-			<!-- <span>itemsTotalSize: {itemsTotalSize}</span> -->
-
-			<!-- {#each virtualItems as row (row.index)}
+			{#each virtualItems as row (row.index)}
 				<Command.Item
 					style="position: absolute; top: 0; left: 0; width: 100%; height: {row.size}px; transform: translateY({row.start}px);"
-					class="pl-64"
 				>
 					<span>{row.index}: {resultingItems[row.index]?.name}</span>
 				</Command.Item>
-			{/each} -->
+			{/each}
 		</div>
 
 		<!-- {#each items as item}

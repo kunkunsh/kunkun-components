@@ -3,24 +3,31 @@
 	import type { Item } from "./utils.ts"
 	import { getContext, onMount } from "svelte"
 	import { createVirtualizer, type VirtualItem } from "@tanstack/svelte-virtual"
+	import Fuse from "fuse.js"
 
 	let {
 		heading,
 		items,
 		parentRef,
-		sectionIdx,
+		searchTerm,
 		sectionHeight = $bindable(0),
 		sectionRef = $bindable(null),
 		scrollMargin = $bindable(0)
 	}: {
 		heading: string
 		items: Item[]
-		sectionIdx: number
 		sectionHeight: number
+		searchTerm: string
 		parentRef: HTMLDivElement | null
 		sectionRef: HTMLDivElement | null
 		scrollMargin: number
 	} = $props()
+
+	const fuse = new Fuse(items, {
+		includeScore: true,
+		threshold: 0.2,
+		keys: ["name"]
+	})
 
 	const itemHeight = getContext<number>("itemHeight") ?? 30
 
@@ -33,12 +40,10 @@
 	let virtualItems: VirtualItem[] = $state([])
 	let itemsTotalSize = $state(0)
 
-	// onMount(() => {
-	// 	setInterval(() => {
-	// 		console.log("sectionRef?.clientHeight", sectionRef?.clientHeight)
-	// 		console.log("sectionHeight", sectionHeight)
-	// 	}, 1000)
-	// })
+	let resultingItems = $derived.by(() => {
+		void searchTerm
+		return searchTerm.length > 0 ? fuse.search(searchTerm).map((item) => item.item) : items
+	})
 
 	$effect(() => {
 		$virtualizer.setOptions({
@@ -46,6 +51,7 @@
 			scrollMargin
 		})
 		virtualItems = $virtualizer.getVirtualItems()
+		fuse.setCollection(items)
 		itemsTotalSize = $virtualizer.getTotalSize()
 	})
 	// let groupHeight = $derived(itemsTotalSize + itemHeight)
@@ -58,7 +64,7 @@
 <Command.Group
 	heading={`${heading} (${items.length})`}
 	bind:ref={sectionRef}
-	class="relative border border-red-500"
+	class="relative"
 	style="height: {sectionHeight}px;"
 >
 	{#if !useVirtual}
@@ -72,7 +78,7 @@
 					scrollMargin +
 					30}px);"
 			>
-				<span>{row.index}: {items[row.index]?.name}; row.start: {row.start}</span>
+				<span>{row.index}: {resultingItems[row.index]?.name}</span>
 			</Command.Item>
 		{/each}
 	{/if}
