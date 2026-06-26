@@ -1,22 +1,19 @@
 <script lang="ts" setup>
+import type { StepperDescriptionProps } from "reka-ui"
+import type { HTMLAttributes } from "vue"
+import { reactiveOmit } from "@vueuse/core"
+import { StepperDescription, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-import type { StepperDescriptionProps } from "radix-vue"
-import { StepperDescription, useForwardProps } from "radix-vue"
-import { computed, type HTMLAttributes } from "vue"
 
 const props = defineProps<StepperDescriptionProps & { class?: HTMLAttributes["class"] }>()
 
-const delegatedProps = computed(() => {
-	const { class: _, ...delegated } = props
-
-	return delegated
-})
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-	<StepperDescription v-bind="forwarded" :class="cn('text-muted-foreground text-xs', props.class)">
-		<slot />
-	</StepperDescription>
+  <StepperDescription v-slot="slotProps" v-bind="forwarded" :class="cn('text-xs text-muted-foreground', props.class)">
+    <slot v-bind="slotProps" />
+  </StepperDescription>
 </template>

@@ -500,4 +500,15 @@ export {
 	Badge
 }
 
+export * from "@/components/ui/button-group"
+export * from "@/components/ui/combobox"
+export * from "@/components/ui/empty"
+export * from "@/components/ui/field"
+export * from "@/components/ui/input-group"
+export * from "@/components/ui/input-otp"
+export * from "@/components/ui/item"
+export * from "@/components/ui/kbd"
+export * from "@/components/ui/native-select"
+export * from "@/components/ui/sidebar"
+export * from "@/components/ui/spinner"
 export * from "@/stores/config"

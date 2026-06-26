@@ -3,7 +3,7 @@
 		"target": "esnext",
 		"useDefineForClassFields": true,
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"strict": true,
 		"jsx": "preserve",
 		"sourceMap": true,
@@ -13,9 +13,10 @@
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"declarationDir": "./dist/types",
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+		"rootDir": "./src",
 		"isolatedModules": true,
 		"skipLibCheck": true,
-		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*"]
 		},

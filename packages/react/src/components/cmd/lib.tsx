@@ -52,8 +52,8 @@ export function ActionPanel({
   actionItems,
   children
 }: {
-  inputRef: React.RefObject<HTMLInputElement>
-  listRef: React.RefObject<HTMLElement>
+  inputRef: React.RefObject<HTMLInputElement | null>
+  listRef: React.RefObject<HTMLElement | null>
   selectedValue: string
   actionItems: ActionItemProps[]
   children?: React.ReactNode

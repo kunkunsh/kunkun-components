@@ -1,28 +1,26 @@
-<script setup lang="ts">
+<script setup lang="ts" generic="Type extends 'text' | 'number' = 'text'">
+import type { PinInputRootEmits, PinInputRootProps } from "reka-ui"
+import type { HTMLAttributes } from "vue"
+import { reactiveOmit } from "@vueuse/core"
+import { PinInputRoot, useForwardPropsEmits } from "reka-ui"
 import { cn } from "@/lib/utils"
-import {
-	PinInputRoot,
-	useForwardPropsEmits,
-	type PinInputRootEmits,
-	type PinInputRootProps
-} from "radix-vue"
-import { computed, type HTMLAttributes } from "vue"
 
-const props = withDefaults(defineProps<PinInputRootProps & { class?: HTMLAttributes["class"] }>(), {
-	modelValue: () => []
+const props = withDefaults(defineProps<PinInputRootProps<Type> & { class?: HTMLAttributes["class"] }>(), {
+  otp: true,
 })
-const emits = defineEmits<PinInputRootEmits>()
+const emits = defineEmits<PinInputRootEmits<Type>>()
 
-const delegatedProps = computed(() => {
-	const { class: _, ...delegated } = props
-	return delegated
-})
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-	<PinInputRoot v-bind="forwarded" :class="cn('flex items-center gap-2', props.class)">
-		<slot />
-	</PinInputRoot>
+  <PinInputRoot
+    :otp="props.otp"
+    data-slot="pin-input"
+    v-bind="forwarded" :class="cn('flex items-center gap-2 has-disabled:opacity-50 disabled:cursor-not-allowed', props.class)"
+  >
+    <slot />
+  </PinInputRoot>
 </template>

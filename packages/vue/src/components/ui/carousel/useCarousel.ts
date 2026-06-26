@@ -1,64 +1,66 @@
+import type { UnwrapRefCarouselApi as CarouselApi, CarouselEmits, CarouselProps } from "./interface"
 import { createInjectionState } from "@vueuse/core"
 import emblaCarouselVue from "embla-carousel-vue"
-import { onMounted, ref } from "vue"
-import type { UnwrapRefCarouselApi as CarouselApi, CarouselEmits, CarouselProps } from "./interface"
+import { onMounted, ref, type Ref } from "vue"
 
-const [useProvideCarousel, useInjectCarousel] = createInjectionState<
-	// !Temp fix for types
-	Array<any>,
-	any
->(({ opts, orientation, plugins }: CarouselProps, emits: CarouselEmits) => {
-	const [emblaNode, emblaApi] = emblaCarouselVue(
-		{
-			...opts,
-			axis: orientation === "horizontal" ? "x" : "y"
-		},
-		plugins
-	)
+interface CarouselState {
+  carouselRef: Ref<HTMLElement | undefined>
+  carouselApi: Ref<CarouselApi>
+  canScrollPrev: Ref<boolean>
+  canScrollNext: Ref<boolean>
+  scrollPrev: () => void
+  scrollNext: () => void
+  orientation: CarouselProps["orientation"]
+}
 
-	function scrollPrev() {
-		emblaApi.value?.scrollPrev()
-	}
-	function scrollNext() {
-		emblaApi.value?.scrollNext()
-	}
+const [useProvideCarousel, useInjectCarousel] = createInjectionState(
+  ({
+    opts,
+    orientation,
+    plugins,
+  }: CarouselProps, emits: CarouselEmits): CarouselState => {
+    const [emblaNode, emblaApi] = emblaCarouselVue({
+      ...opts,
+      axis: orientation === "horizontal" ? "x" : "y",
+    }, plugins)
 
-	const canScrollNext = ref(false)
-	const canScrollPrev = ref(false)
+    function scrollPrev() {
+      emblaApi.value?.scrollPrev()
+    }
+    function scrollNext() {
+      emblaApi.value?.scrollNext()
+    }
 
-	function onSelect(api: CarouselApi) {
-		canScrollNext.value = api?.canScrollNext() || false
-		canScrollPrev.value = api?.canScrollPrev() || false
-	}
+    const canScrollNext = ref(false)
+    const canScrollPrev = ref(false)
 
-	onMounted(() => {
-		if (!emblaApi.value) return
+    function onSelect(api: CarouselApi) {
+      canScrollNext.value = api?.canScrollNext() || false
+      canScrollPrev.value = api?.canScrollPrev() || false
+    }
 
-		emblaApi.value?.on("init", onSelect)
-		emblaApi.value?.on("reInit", onSelect)
-		emblaApi.value?.on("select", onSelect)
+    onMounted(() => {
+      if (!emblaApi.value)
+        return
 
-		emits("init-api", emblaApi.value)
-	})
+      emblaApi.value?.on("init", onSelect)
+      emblaApi.value?.on("reInit", onSelect)
+      emblaApi.value?.on("select", onSelect)
 
-	return {
-		carouselRef: emblaNode,
-		carouselApi: emblaApi,
-		canScrollPrev,
-		canScrollNext,
-		scrollPrev,
-		scrollNext,
-		orientation
-	}
-})
+      emits("init-api", emblaApi.value)
+    })
 
-// !Temp fix for types
-function useCarousel(): any {
-	const carouselState = useInjectCarousel()
+    return { carouselRef: emblaNode, carouselApi: emblaApi, canScrollPrev, canScrollNext, scrollPrev, scrollNext, orientation } satisfies CarouselState
+  },
+)
 
-	if (!carouselState) throw new Error("useCarousel must be used within a <Carousel />")
+function useCarousel() {
+  const carouselState = useInjectCarousel()
 
-	return carouselState
+  if (!carouselState)
+    throw new Error("useCarousel must be used within a <Carousel />")
+
+  return carouselState
 }
 
 export { useCarousel, useProvideCarousel }

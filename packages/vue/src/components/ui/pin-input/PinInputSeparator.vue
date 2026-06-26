@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import { DashIcon } from "@radix-icons/vue"
-import { Primitive, useForwardProps, type PrimitiveProps } from "radix-vue"
+import type { PrimitiveProps } from "reka-ui"
+import { Minus } from "@lucide/vue"
+import { Primitive, useForwardProps } from "reka-ui"
 
 const props = defineProps<PrimitiveProps>()
 const forwardedProps = useForwardProps(props)
 </script>
 
 <template>
-	<Primitive v-bind="forwardedProps">
-		<slot>
-			<DashIcon />
-		</slot>
-	</Primitive>
+  <Primitive
+    data-slot="pin-input-separator"
+    v-bind="forwardedProps"
+  >
+    <slot>
+      <Minus />
+    </slot>
+  </Primitive>
 </template>

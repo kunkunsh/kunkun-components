@@ -1,19 +1,21 @@
 <script setup lang="ts">
+import type { MenubarSeparatorProps } from "reka-ui"
+import type { HTMLAttributes } from "vue"
+import { reactiveOmit } from "@vueuse/core"
+import { MenubarSeparator, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
-import { MenubarSeparator, useForwardProps, type MenubarSeparatorProps } from "radix-vue"
-import { computed, type HTMLAttributes } from "vue"
 
 const props = defineProps<MenubarSeparatorProps & { class?: HTMLAttributes["class"] }>()
 
-const delegatedProps = computed(() => {
-	const { class: _, ...delegated } = props
-
-	return delegated
-})
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-	<MenubarSeparator :class="cn('bg-muted -mx-1 my-1 h-px', props.class)" v-bind="forwardedProps" />
+  <MenubarSeparator
+    data-slot="menubar-separator"
+    :class=" cn('bg-border -mx-1 my-1 h-px', props.class)"
+    v-bind="forwardedProps"
+  />
 </template>

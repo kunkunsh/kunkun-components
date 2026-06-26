@@ -96,10 +96,10 @@ const formComponentProps = computed(() => {
 					:config="fieldConfig?.[key as keyof typeof fieldConfig] as ConfigItem"
 				>
 					<AutoFormField
-						:config="fieldConfig?.[key as keyof typeof fieldConfig] as ConfigItem"
-						:field-name="key.toString()"
-						:shape="shape"
-					/>
+							:config="fieldConfig?.[key as keyof typeof fieldConfig] as ConfigItem"
+							:field-name="key.toString()"
+							:shape="shape as Shape"
+						/>
 				</slot>
 			</template>
 		</slot>

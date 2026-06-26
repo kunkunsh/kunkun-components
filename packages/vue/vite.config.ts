@@ -1,7 +1,6 @@
 import path from "path"
+import tailwindcss from "@tailwindcss/vite"
 import vue from "@vitejs/plugin-vue"
-import autoprefixer from "autoprefixer"
-import tailwind from "tailwindcss"
 import { defineConfig } from "vite"
 import dts from "vite-plugin-dts"
 import { dependencies, peerDependencies } from "./package.json"
@@ -16,6 +15,7 @@ const uiComponents = [
 	"badge",
 	"breadcrumb",
 	"button",
+	"button-group",
 	"calendar",
 	"card",
 	"carousel",
@@ -26,17 +26,25 @@ const uiComponents = [
 	"chart-line",
 	"checkbox",
 	"collapsible",
+	"combobox",
 	"command",
 	"command-extra",
 	"context-menu",
 	"dialog",
 	"drawer",
 	"dropdown-menu",
+	"empty",
+	"field",
 	"form",
 	"hover-card",
 	"input",
+	"input-group",
+	"input-otp",
+	"item",
+	"kbd",
 	"label",
 	"menubar",
+	"native-select",
 	"navigation-menu",
 	"number-field",
 	"pagination",
@@ -50,16 +58,17 @@ const uiComponents = [
 	"select",
 	"separator",
 	"sheet",
+	"sidebar",
 	"skeleton",
 	"slider",
 	"sonner",
+	"spinner",
 	"stepper",
 	"switch",
 	"table",
 	"tabs",
 	"tags-input",
 	"textarea",
-	"toast",
 	"toggle",
 	"toggle-group",
 	"tooltip",
@@ -79,7 +88,8 @@ export default defineConfig({
 			],
 			// entry: ["./src/index.ts", "./src/dev.ts"],
 			name: "@kksh/vue",
-			formats: ["es", "cjs"]
+			formats: ["es", "cjs"],
+			cssFileName: "style"
 		},
 		rollupOptions: {
 			external: [...Object.keys(peerDependencies), ...Object.keys(dependencies)],
@@ -93,15 +103,8 @@ export default defineConfig({
 		emptyOutDir: true,
 		chunkSizeWarningLimit: 500
 	},
-	css: {
-		postcss: {
-			plugins: [
-				tailwind()
-				// autoprefixer()
-			]
-		}
-	},
 	plugins: [
+		tailwindcss(),
 		vue(),
 		dts({
 			include: ["src/**/*"]

@@ -1,42 +1,39 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils"
-import { CheckIcon } from "@radix-icons/vue"
+import type { MenubarCheckboxItemEmits, MenubarCheckboxItemProps } from "reka-ui"
+import type { HTMLAttributes } from "vue"
+import { Check } from "@lucide/vue"
+import { reactiveOmit } from "@vueuse/core"
 import {
-	MenubarCheckboxItem,
-	MenubarItemIndicator,
-	useForwardPropsEmits,
-	type MenubarCheckboxItemEmits,
-	type MenubarCheckboxItemProps
-} from "radix-vue"
-import { computed, type HTMLAttributes } from "vue"
+  MenubarCheckboxItem,
+  MenubarItemIndicator,
+  useForwardPropsEmits,
+} from "reka-ui"
+import { cn } from "@/lib/utils"
 
 const props = defineProps<MenubarCheckboxItemProps & { class?: HTMLAttributes["class"] }>()
 const emits = defineEmits<MenubarCheckboxItemEmits>()
 
-const delegatedProps = computed(() => {
-	const { class: _, ...delegated } = props
-
-	return delegated
-})
+const delegatedProps = reactiveOmit(props, "class")
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-	<MenubarCheckboxItem
-		v-bind="forwarded"
-		:class="
-			cn(
-				'focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-				props.class
-			)
-		"
-	>
-		<span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-			<MenubarItemIndicator>
-				<CheckIcon class="h-4 w-4" />
-			</MenubarItemIndicator>
-		</span>
-		<slot />
-	</MenubarCheckboxItem>
+  <MenubarCheckboxItem
+    data-slot="menubar-checkbox-item"
+    v-bind="forwarded"
+    :class="cn(
+      'focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*=\'size-\'])]:size-4',
+      props.class,
+    )"
+  >
+    <span class="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+      <MenubarItemIndicator>
+        <slot name="indicator-icon">
+          <Check class="size-4" />
+        </slot>
+      </MenubarItemIndicator>
+    </span>
+    <slot />
+  </MenubarCheckboxItem>
 </template>
