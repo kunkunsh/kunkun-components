@@ -34,15 +34,15 @@
 		<div>
 			<Button>Hello</Button>
 		</div>
-		<Alert.Root variant="error">
+		<Alert.Root variant="destructive">
 			<Alert.Title>Error</Alert.Title>
 			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
 		</Alert.Root>
-		<Alert.Root variant="success">
+		<Alert.Root>
 			<Alert.Title>Success</Alert.Title>
 			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
 		</Alert.Root>
-		<Alert.Root variant="info">
+		<Alert.Root>
 			<Alert.Title>Info</Alert.Title>
 			<Alert.Description>Your session has expired. Please login again.</Alert.Description>
 		</Alert.Root>

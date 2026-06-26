@@ -1,7 +1,7 @@
-import type { Theme } from "@/registry/themes.ts"
+import type { Theme } from "$lib/registry/themes.js"
 
 export type ThemeConfig = {
 	theme: Theme["name"]
 	radius: number
-	lightMode: "auto" | "light" | "dark"
+	lightMode: "system" | "light" | "dark"
 }

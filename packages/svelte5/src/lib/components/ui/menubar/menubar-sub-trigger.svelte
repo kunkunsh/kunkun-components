@@ -1,28 +1,29 @@
 <script lang="ts">
 	import { Menubar as MenubarPrimitive } from "bits-ui";
-	import ChevronRight from "svelte-radix/ChevronRight.svelte";
-	import { cn } from "$lib/utils.js";
+	import { cn, type WithoutChild } from "$lib/utils.js";
+	import ChevronRightIcon from '@lucide/svelte/icons/chevron-right';
 
 	let {
 		ref = $bindable(null),
 		class: className,
-		inset,
+		inset = undefined,
 		children,
 		...restProps
-	}: MenubarPrimitive.SubTriggerProps & {
+	}: WithoutChild<MenubarPrimitive.SubTriggerProps> & {
 		inset?: boolean;
 	} = $props();
 </script>
 
 <MenubarPrimitive.SubTrigger
 	bind:ref
+	data-slot="menubar-sub-trigger"
+	data-inset={inset}
 	class={cn(
-		"data-[highlighted]:bg-accent data-[state=open]:bg-accent data-[highlighted]:text-accent-foreground data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-		inset && "pl-8",
+		"focus:bg-accent focus:text-accent-foreground data-open:bg-accent data-open:text-accent-foreground gap-1.5 rounded-md px-1.5 py-1 text-sm data-inset:pl-7 [&_svg:not([class*='size-'])]:size-4 flex cursor-default items-center outline-none select-none",
 		className
 	)}
 	{...restProps}
 >
 	{@render children?.()}
-	<ChevronRight class="ml-auto size-4" />
+	<ChevronRightIcon class="cn-rtl-flip ml-auto size-4" />
 </MenubarPrimitive.SubTrigger>

@@ -1,15 +1,15 @@
 <script lang="ts">
-	import ArrowRight from "svelte-radix/ArrowRight.svelte";
 	import type { WithoutChildren } from "bits-ui";
 	import { getEmblaContext } from "./context.js";
 	import { cn } from "$lib/utils.js";
 	import { Button, type Props } from "$lib/components/ui/button/index.js";
+	import ChevronRightIcon from '@lucide/svelte/icons/chevron-right';
 
 	let {
 		ref = $bindable(null),
 		class: className,
 		variant = "outline",
-		size = "icon",
+		size = "icon-sm",
 		...restProps
 	}: WithoutChildren<Props> = $props();
 
@@ -17,21 +17,23 @@
 </script>
 
 <Button
+	data-slot="carousel-next"
 	{variant}
 	{size}
+	aria-disabled={!emblaCtx.canScrollNext}
+	disabled={!emblaCtx.canScrollNext}
 	class={cn(
-		"absolute size-8 touch-manipulation rounded-full",
+		"rounded-full absolute touch-manipulation",
 		emblaCtx.orientation === "horizontal"
-			? "-right-12 top-1/2 -translate-y-1/2"
-			: "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+			? "-end-12 top-1/2 -translate-y-1/2"
+			: "start-1/2 -bottom-12 -translate-x-1/2 rotate-90",
 		className
 	)}
-	disabled={!emblaCtx.canScrollNext}
 	onclick={emblaCtx.scrollNext}
 	onkeydown={emblaCtx.handleKeyDown}
 	bind:ref
 	{...restProps}
 >
-	<ArrowRight class="size-4" />
+	<ChevronRightIcon  />
 	<span class="sr-only">Next slide</span>
 </Button>

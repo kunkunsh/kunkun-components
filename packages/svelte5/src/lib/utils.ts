@@ -1,41 +1,21 @@
-import { mode, setMode } from "mode-watcher"
-import { config as themeConfig } from "$lib/stores/config.js"
-import type { HTMLAttributes } from "svelte/elements"
-import type { WithElementRef } from "bits-ui"
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
-import type { ThemeConfig } from "./components/theme/types.ts"
-import { get } from "svelte/store"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+import type { HTMLAttributes } from "svelte/elements";
+import type { ThemeConfig } from "./components/theme/types.js";
+import { config as themeConfig } from "./stores/config.js";
 
 export function cn(...inputs: ClassValue[]) {
-	return twMerge(clsx(inputs))
+	return twMerge(clsx(inputs));
 }
 
-export type PrimitiveDivAttributes = WithElementRef<HTMLAttributes<HTMLDivElement>>
-
-export function isBrowser() {
-	return typeof document !== "undefined"
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type WithoutChild<T> = T extends { child?: any } ? Omit<T, "child"> : T;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type WithoutChildren<T> = T extends { children?: any } ? Omit<T, "children"> : T;
+export type WithoutChildrenOrChild<T> = WithoutChildren<WithoutChild<T>>;
+export type WithElementRef<T, U extends HTMLElement = HTMLElement> = T & { ref?: U | null };
+export type PrimitiveDivAttributes = WithElementRef<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export function updateTheme(config: ThemeConfig) {
-	themeConfig.set(config)
-	// refreshTheme()
+	themeConfig.set(config);
 }
-
-/**
- * Apply color and light theme to html body
- */
-// export function refreshTheme() {
-// 	if (!isBrowser()) {
-// 		console.warn("Not in browser")
-// 		return
-// 	}
-// 	document.body.classList.forEach((className) => {
-// 		if (className.match(/^theme.*/)) {
-// 			document.body.classList.remove(className)
-// 		}
-// 	})
-// 	const themeConfigVal = get(themeConfig)
-// 	setMode(themeConfigVal.lightMode === "auto" ? "dark" : themeConfigVal.lightMode)
-// 	document.body.classList.add(`theme-${themeConfigVal.theme}`)
-// }

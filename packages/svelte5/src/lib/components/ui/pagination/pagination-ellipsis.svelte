@@ -1,8 +1,7 @@
 <script lang="ts">
-	import DotsHorizontal from "svelte-radix/DotsHorizontal.svelte";
-	import type { WithElementRef, WithoutChildren } from "bits-ui";
 	import type { HTMLAttributes } from "svelte/elements";
-	import { cn } from "$lib/utils.js";
+	import { cn, type WithElementRef, type WithoutChildren } from "$lib/utils.js";
+	import MoreHorizontalIcon from '@lucide/svelte/icons/more-horizontal';
 
 	let {
 		ref = $bindable(null),
@@ -14,9 +13,10 @@
 <span
 	bind:this={ref}
 	aria-hidden="true"
-	class={cn("flex size-9 items-center justify-center", className)}
+	data-slot="pagination-ellipsis"
+	class={cn("size-8 items-center justify-center [&_svg:not([class*='size-'])]:size-4 flex items-center justify-center", className)}
 	{...restProps}
 >
-	<DotsHorizontal class="size-4" />
+	<MoreHorizontalIcon  />
 	<span class="sr-only">More pages</span>
 </span>

@@ -41,11 +41,7 @@ export { Switch } from "./components/ui/switch/index.js"
 export * as Table from "./components/ui/table/index.js"
 export * as DataTable from "./components/ui/data-table/index.js"
 export * as Tabs from "./components/ui/tabs/index.js"
-export {
-	Textarea,
-	type TextareaEvents,
-	type FormTextareaEvent
-} from "./components/ui/textarea/index.js"
+export { Textarea } from "./components/ui/textarea/index.js"
 export { Toggle } from "./components/ui/toggle/index.js"
 export { ToggleGroup, ToggleGroupItem } from "./components/ui/toggle-group/index.js"
 export { Tooltip, TooltipContent, TooltipTrigger } from "./components/ui/tooltip/index.js"

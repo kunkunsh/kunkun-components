@@ -1,19 +1,20 @@
 <script lang="ts">
-	import ChevronUp from "svelte-radix/ChevronUp.svelte";
-	import { Select as SelectPrimitive, type WithoutChildrenOrChild } from "bits-ui";
-	import { cn } from "$lib/utils.js";
+	import { Select as SelectPrimitive } from "bits-ui";
+	import { cn, type WithoutChildrenOrChild } from "$lib/utils.js";
+	import ChevronUpIcon from '@lucide/svelte/icons/chevron-up';
 
 	let {
 		ref = $bindable(null),
 		class: className,
 		...restProps
-	}: WithoutChildrenOrChild<SelectPrimitive.ScrollDownButtonProps> = $props();
+	}: WithoutChildrenOrChild<SelectPrimitive.ScrollUpButtonProps> = $props();
 </script>
 
 <SelectPrimitive.ScrollUpButton
 	bind:ref
-	class={cn("flex cursor-default items-center justify-center py-1", className)}
+	data-slot="select-scroll-up-button"
+	class={cn("bg-popover z-10 flex cursor-default items-center justify-center py-1 [&_svg:not([class*='size-'])]:size-4 top-0 w-full", className)}
 	{...restProps}
 >
-	<ChevronUp class="size-4" />
+	<ChevronUpIcon  />
 </SelectPrimitive.ScrollUpButton>

@@ -13,13 +13,13 @@
 	import ThemeWrapper from "./theme-wrapper.svelte"
 	import type { ThemeConfig } from "./types.js"
 
-	export let config: ThemeConfig
+	let { config = $bindable() }: { config: ThemeConfig } = $props()
 
 	onMount(() => {
 		toast.success("Hello world!")
 	})
 
-	$: mode = config.lightMode !== "auto" ? config.lightMode : undefined
+	const mode = $derived(config.lightMode === "light" ? "light" : "dark")
 </script>
 
 <ThemeWrapper defaultTheme="zinc" class="flex flex-col space-y-4 md:space-y-6">
@@ -54,7 +54,7 @@
 							config.theme = theme.name
 						}}
 						class={cn("justify-start", isActive && "border-primary border-2")}
-						style="--theme-primary: hsl({theme.activeColor[mode ?? 'dark']})"
+						style="--theme-primary: hsl({theme.activeColor[mode]})"
 					>
 						<span
 							class="mr-1 flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-primary]"

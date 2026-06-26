@@ -1,7 +1,9 @@
-import type { EmblaCarouselSvelteType } from "embla-carousel-svelte";
-import type emblaCarouselSvelte from "embla-carousel-svelte";
+import type { WithElementRef } from "$lib/utils.js";
+import type {
+	EmblaCarouselSvelteType,
+	default as emblaCarouselSvelte,
+} from "embla-carousel-svelte";
 import { getContext, hasContext, setContext } from "svelte";
-import type { WithElementRef } from "bits-ui";
 import type { HTMLAttributes } from "svelte/elements";
 
 export type CarouselAPI =
@@ -15,6 +17,8 @@ type EmblaCarouselConfig = NonNullable<Parameters<typeof emblaCarouselSvelte>[1]
 
 export type CarouselOptions = EmblaCarouselConfig["options"];
 export type CarouselPlugins = EmblaCarouselConfig["plugins"];
+
+////
 
 export type CarouselProps = {
 	opts?: CarouselOptions;
