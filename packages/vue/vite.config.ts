@@ -81,6 +81,7 @@ export default defineConfig({
 		lib: {
 			entry: [
 				"./src/index.ts",
+				"./src/style-entry.ts",
 				"./src/components/command-extra/index.ts",
 				...uiComponents.map((component) => `./src/components/ui/${component}/index.ts`)
 				// "./src/components/ui/button/index.ts",

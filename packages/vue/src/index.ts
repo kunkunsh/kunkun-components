@@ -1,4 +1,3 @@
-import "./assets/index.css"
 import { ThemeConfig, updateTheme } from "@/stores/config"
 import ThemeCustomizer from "./components/theme/ThemeCustomizer.vue"
 import Accordion from "./components/ui/accordion/Accordion.vue"

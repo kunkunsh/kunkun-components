@@ -9,7 +9,7 @@ import { peerDependencies, dependencies } from "./package.json"
 export default defineConfig({
   build: {
     lib: {
-      entry: ["./src/index.ts"],
+      entry: ["./src/index.ts", "./src/style-entry.ts"],
       name: "@kksh/react",
       formats: ["es", "cjs"],
       cssFileName: "style"

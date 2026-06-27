@@ -1,3 +1,5 @@
 @import "tailwindcss";
-@import "@kksh/vue/css";
+@source ".";
+@source "../../../packages/vue/src";
+@import "../../../packages/vue/src/assets/theme.css";
 @import "@kksh/vue/themes";

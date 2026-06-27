@@ -6,8 +6,6 @@ import {
 	ThemeWrapper,
 	TooltipProvider
 } from "@kksh/react"
-import "@kksh/react/css"
-import "@kksh/react/themes"
 
 function App() {
 	return (
