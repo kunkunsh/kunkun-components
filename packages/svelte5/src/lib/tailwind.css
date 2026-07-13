@@ -1,0 +1,73 @@
+/*
+ * @kksh/svelte5 Tailwind base — REQUIRED for consumers.
+ *
+ * Import this once in your Tailwind entry CSS, right after `@import 'tailwindcss'`:
+ *
+ *     @import 'tailwindcss';
+ *     @import '@kksh/svelte5/tailwind.css';
+ *
+ * These components are ported from shadcn-svelte and style their stateful parts
+ * with bare `data-checked:` / `data-open:` / `data-horizontal:` … variants. The
+ * underlying bits-ui primitives, however, emit `data-state="checked|open|…"` and
+ * `data-orientation="horizontal|vertical"`. Without the variant definitions below
+ * those selectors never match — slider tracks collapse to 0px, switches render
+ * transparent, and dropdowns lose their open/close animation. The definitions
+ * bridge both the `data-state`/`data-orientation` form (what bits-ui emits) and
+ * the bare `data-*` form, using `:where()` for zero specificity so utilities can
+ * still override. Mirrors shadcn-svelte's own `shadcn-svelte/tailwind.css`.
+ */
+
+/* Custom variants */
+@custom-variant data-open {
+	&:where([data-state='open']),
+	&:where([data-open]:not([data-open='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-closed {
+	&:where([data-state='closed']),
+	&:where([data-closed]:not([data-closed='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-checked {
+	&:where([data-state='checked']),
+	&:where([data-checked]:not([data-checked='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-unchecked {
+	&:where([data-state='unchecked']),
+	&:where([data-unchecked]:not([data-unchecked='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-disabled {
+	&:where([data-disabled='true']),
+	&:where([data-disabled]:not([data-disabled='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-active {
+	&:where([data-state='active']),
+	&:where([data-active]:not([data-active='false'])) {
+		@slot;
+	}
+}
+
+@custom-variant data-horizontal {
+	&:where([data-orientation='horizontal']) {
+		@slot;
+	}
+}
+
+@custom-variant data-vertical {
+	&:where([data-orientation='vertical']) {
+		@slot;
+	}
+}

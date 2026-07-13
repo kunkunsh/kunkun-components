@@ -28,7 +28,8 @@
 			"types": "./dist/utils.d.ts",
 			"import": "./dist/utils.js"
 		},
-		"./themes": "./dist/registry/themes.css"
+		"./themes": "./dist/registry/themes.css",
+		"./tailwind.css": "./dist/tailwind.css"
 	},
 	"peerDependencies": {
 		"@lucide/svelte": ">=1.21.0",
