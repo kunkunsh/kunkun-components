@@ -114,7 +114,7 @@ importers:
         version: 4.2.20
       svelte-check:
         specifier: ^3.8.4
-        version: 3.8.6(@babel/core@7.29.7)(postcss-load-config@5.1.0(postcss@8.5.15))(postcss@8.5.15)(svelte@4.2.20)
+        version: 3.8.6(@babel/core@7.29.7)(postcss-load-config@5.1.0(jiti@1.21.7)(postcss@8.5.15))(postcss@8.5.15)(svelte@4.2.20)
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.19
@@ -544,7 +544,7 @@ importers:
         version: 4.2.20
       svelte-check:
         specifier: ^3.6.0
-        version: 3.8.6(@babel/core@7.29.7)(postcss-load-config@5.1.0(jiti@1.21.7)(postcss@8.5.15))(postcss@8.5.15)(svelte@4.2.20)
+        version: 3.8.6(@babel/core@7.29.7)(postcss-load-config@5.1.0(postcss@8.5.15))(postcss@8.5.15)(svelte@4.2.20)
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.19
@@ -560,6 +560,9 @@ importers:
       '@faker-js/faker':
         specifier: ^10.5.0
         version: 10.5.0
+      '@internationalized/date':
+        specifier: ^3.12.2
+        version: 3.12.2
       '@tanstack/svelte-virtual':
         specifier: ^3.13.30
         version: 3.13.30(svelte@5.56.4(@typescript-eslint/types@8.62.0))
@@ -569,6 +572,9 @@ importers:
       bits-ui:
         specifier: 2.18.1
         version: 2.18.1(@internationalized/date@3.12.2)(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4(@typescript-eslint/types@8.62.0))(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(svelte@5.56.4(@typescript-eslint/types@8.62.0))
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       embla-carousel-svelte:
         specifier: ^8.6.0
         version: 8.6.0(svelte@5.56.4(@typescript-eslint/types@8.62.0))
@@ -599,10 +605,22 @@ importers:
       svelte-sonner:
         specifier: ^1.1.1
         version: 1.1.1(svelte@5.56.4(@typescript-eslint/types@8.62.0))
+      sveltekit-superforms:
+        specifier: ^2.30.1
+        version: 2.30.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4(@typescript-eslint/types@8.62.0))(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(@types/json-schema@7.0.15)(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)
+      tailwind-merge:
+        specifier: ^3.6.0
+        version: 3.6.0
+      tailwind-variants:
+        specifier: ^3.2.2
+        version: 3.2.2(tailwind-merge@3.6.0)(tailwindcss@4.3.1)
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@4.3.1)
+      vaul-svelte:
+        specifier: 1.0.0-next.7
+        version: 1.0.0-next.7(svelte@5.56.4(@typescript-eslint/types@8.62.0))
     devDependencies:
-      '@internationalized/date':
-        specifier: ^3.12.2
-        version: 3.12.2
       '@lucide/svelte':
         specifier: ^1.21.0
         version: 1.21.0(svelte@5.56.4(@typescript-eslint/types@8.62.0))
@@ -621,9 +639,6 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.3.1
         version: 4.3.1(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0))
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       publint:
         specifier: ^0.3.21
         version: 0.3.21
@@ -633,27 +648,12 @@ importers:
       svelte-check:
         specifier: ^4.7.1
         version: 4.7.1(picomatch@4.0.4)(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)
-      sveltekit-superforms:
-        specifier: ^2.30.1
-        version: 2.30.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4(@typescript-eslint/types@8.62.0))(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)(vite@8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)))(@types/json-schema@7.0.15)(svelte@5.56.4(@typescript-eslint/types@8.62.0))(typescript@6.0.3)
-      tailwind-merge:
-        specifier: ^3.6.0
-        version: 3.6.0
-      tailwind-variants:
-        specifier: ^3.2.2
-        version: 3.2.2(tailwind-merge@3.6.0)(tailwindcss@4.3.1)
       tailwindcss:
         specifier: ^4.3.1
         version: 4.3.1
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.3.1)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
-      vaul-svelte:
-        specifier: 1.0.0-next.7
-        version: 1.0.0-next.7(svelte@5.56.4(@typescript-eslint/types@8.62.0))
       vite:
         specifier: ^8.1.0
         version: 8.1.0(@types/node@26.0.1)(jiti@2.7.0)(yaml@2.9.0)
